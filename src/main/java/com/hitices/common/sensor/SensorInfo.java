@@ -15,12 +15,14 @@ import lombok.Setter;
 public class SensorInfo extends DeviceInfo {
 
     private EndPoint endPoint;
+    private SensorType type;
 
     public SensorInfo() {
     }
 
-    public SensorInfo(String id, String name, String description, EndPoint endPoint) {
+    public SensorInfo(String id, String name, String description, EndPoint endPoint, SensorType type) {
         super(id, name, description);
         this.endPoint = endPoint;
+        this.type = type;
     }
 }

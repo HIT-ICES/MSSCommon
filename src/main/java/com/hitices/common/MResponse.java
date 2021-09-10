@@ -13,6 +13,9 @@ public class MResponse<T> {
     private String status;
     private int code;
 
+    public static final int successCode = 0;
+    public static final int failedCode = 0;
+
     public MResponse<T> setData(T data){
         this.data = data;
         return this;
@@ -29,10 +32,10 @@ public class MResponse<T> {
     }
 
     public static MResponse successMResponse(){
-        return new MResponse().setCode(1).setStatus("success");
+        return new MResponse().setCode(successCode).setStatus("success");
     }
 
     public static MResponse failedMResponse(){
-        return new MResponse().setCode(0).setStatus("failed");
+        return new MResponse().setCode(failedCode).setStatus("failed");
     }
 }
