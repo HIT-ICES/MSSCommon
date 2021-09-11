@@ -17,7 +17,7 @@ public class MResponse {
     private int code;
 
     public static final int successCode = 0;
-    public static final int failedCode = 0;
+    public static final int failedCode = 1;
 
     private Map<String, Object> valueMap = new HashMap<>();
 
