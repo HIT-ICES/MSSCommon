@@ -2,31 +2,39 @@ package com.hitices.common;
 
 import lombok.Getter;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author septemberhx
  * @date 2021/7/6
  **/
 
 @Getter
-public class MResponse<T> {
-    private T data;
+public class MResponse {
     private String status;
     private int code;
 
     public static final int successCode = 0;
     public static final int failedCode = 0;
 
-    public MResponse<T> setData(T data){
-        this.data = data;
+    private Map<String, Object> valueMap = new HashMap<>();
+
+    public Object get(String key) {
+        return this.valueMap.getOrDefault(key, null);
+    }
+
+    public MResponse set(String key, Object value) {
+        this.valueMap.put(key, value);
         return this;
     }
 
-    public MResponse<T> setCode(int code){
+    public MResponse setCode(int code){
         this.code = code;
         return this;
     }
 
-    public MResponse<T> setStatus(String status){
+    public MResponse setStatus(String status){
         this.status = status;
         return this;
     }

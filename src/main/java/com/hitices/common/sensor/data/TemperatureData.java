@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -28,5 +29,10 @@ public class TemperatureData {
             }
         }
         return data;
+    }
+
+    public Map<String, Object> toMap(Map<String, Object> result) {
+        result.put("temperature", this.getTemperature());
+        return result;
     }
 }
