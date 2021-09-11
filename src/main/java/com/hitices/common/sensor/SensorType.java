@@ -11,4 +11,9 @@ public enum SensorType {
      * 湿度传感器
      */
     HUMIDITY,
+
+    /*
+     * 集合类型
+     */
+    ENVIRONMENT,
 }

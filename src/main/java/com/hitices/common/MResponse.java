@@ -1,5 +1,6 @@
 package com.hitices.common;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Getter;
 
 import java.util.HashMap;
@@ -45,5 +46,15 @@ public class MResponse {
 
     public static MResponse failedMResponse(){
         return new MResponse().setCode(failedCode).setStatus("failed");
+    }
+
+    public  <T> void setData(T data) {
+        ObjectMapper mapper = new ObjectMapper();
+        this.valueMap = mapper.convertValue(data, Map.class);
+    }
+
+    public  <T> T getData(Class<T> clz) {
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.convertValue(this.valueMap, clz);
     }
 }

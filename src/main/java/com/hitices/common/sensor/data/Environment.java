@@ -1,5 +1,6 @@
 package com.hitices.common.sensor.data;
 
+import com.hitices.common.sensor.SensorType;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -16,12 +17,7 @@ import java.util.Map;
 @Setter
 @ToString
 public class Environment {
+    private SensorType type = SensorType.ENVIRONMENT;
     private TemperatureData tp;
     private HumidityData hd;
-
-    public Map<String, Object> toMap(Map<String, Object> result) {
-        this.tp.toMap(result);
-        this.hd.toMap(result);
-        return result;
-    }
 }
