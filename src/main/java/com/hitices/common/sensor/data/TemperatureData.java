@@ -16,10 +16,11 @@ import java.util.Map;
 @Getter
 @Setter
 @ToString
-public class TemperatureData extends SensorData {
+public class TemperatureData extends SensorData
+{
     private double temperature;
 
-    public TemperatureData(SensorType type)
+    public TemperatureData()
     {
         super(SensorType.TEMPERATURE);
     }

@@ -21,7 +21,7 @@ public class Environment extends SensorData
     private TemperatureData tp;
     private HumidityData hd;
 
-    public Environment(SensorType type)
+    public Environment()
     {
         super(SensorType.ENVIRONMENT);
     }
