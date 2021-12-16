@@ -16,8 +16,13 @@ import java.util.Map;
 @Getter
 @Setter
 @ToString
-public class Environment {
-    private SensorType type = SensorType.ENVIRONMENT;
+public class Environment extends SensorData
+{
     private TemperatureData tp;
     private HumidityData hd;
+
+    public Environment(SensorType type)
+    {
+        super(SensorType.ENVIRONMENT);
+    }
 }

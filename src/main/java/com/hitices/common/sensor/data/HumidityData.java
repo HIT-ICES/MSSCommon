@@ -15,7 +15,11 @@ import java.util.Map;
 @Getter
 @Setter
 @ToString
-public class HumidityData {
-    private SensorType type = SensorType.HUMIDITY;
+public class HumidityData extends SensorData {
     private double humidity;
+
+    public HumidityData(SensorType type)
+    {
+        super(SensorType.HUMIDITY);
+    }
 }
