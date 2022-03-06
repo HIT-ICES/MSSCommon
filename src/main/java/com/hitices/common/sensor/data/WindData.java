@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.Map;
+
 /**
  * @author septemberhx
  * @date 2021/9/10
@@ -13,15 +15,13 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Environment extends SensorData
+public class WindData extends SensorData
 {
-    private TemperatureData tp;
-    private HumidityData hd;
-    private WindData wd;
-    private WaterVelocityData wvd;
+    private double windLevel;
+    private double windDirection;
 
-    public Environment()
+    public WindData()
     {
-        super(SensorType.ENVIRONMENT);
+        super(SensorType.WIND);
     }
 }

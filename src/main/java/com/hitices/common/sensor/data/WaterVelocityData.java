@@ -13,15 +13,12 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Environment extends SensorData
+public class WaterVelocityData extends SensorData
 {
-    private TemperatureData tp;
-    private HumidityData hd;
-    private WindData wd;
-    private WaterVelocityData wvd;
+    private double WaterVelocityData;
 
-    public Environment()
+    public WaterVelocityData()
     {
-        super(SensorType.ENVIRONMENT);
+        super(SensorType.WATER_VELOCITY);
     }
 }

@@ -48,7 +48,7 @@ public class MResponse {
         return new MResponse().setCode(failedCode).setStatus("failed");
     }
 
-    public  <T> void setData(T data) {
+    public  <T extends Map> void setData(T data) {
         ObjectMapper mapper = new ObjectMapper();
         this.valueMap = mapper.convertValue(data, Map.class);
     }
