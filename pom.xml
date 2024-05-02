@@ -35,15 +35,10 @@
     </dependencies>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <name>Nexus Snapshots</name>
-            <url>http://192.168.1.102:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
         <repository>
-            <id>nexus-releases</id>
-            <name>Nexus releases</name>
-            <url>http://192.168.1.102:8081/repository/maven-releases/</url>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/HIT-ICES/MSSCommon</url>
         </repository>
     </distributionManagement>
 </project>
